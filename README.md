@@ -35,8 +35,8 @@ pip install opencv-python
 Chạy đoạn mã sau để kiểm tra xem EasyOCR có hoạt động chính xác hay không:
 ```python
 import easyocr
-reader = easyocr.Reader(['en', 'vi'])  # Hỗ trợ Tiếng Anh và Tiếng Việt
-result = reader.readtext('sample_image.jpg')
+reader = easyocr.Reader(['en', 'vi']) # Khai báo ngôn ngữ để trích xuất văn bản
+result = reader.readtext('path/to/image.jpg')
 print(result)
 ```
 Hãy thay thế `'sample_image.jpg'` bằng một tệp ảnh hợp lệ.
