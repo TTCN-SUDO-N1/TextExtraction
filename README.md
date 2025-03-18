@@ -9,17 +9,15 @@ Lấy text từ hình ảnh
 1. Tải phiên bản anaconda mới nhất từ [trang web anaconda](https://www.anaconda.com/download).
 2. Làm theo hướng dẫn cài đặt theo hệ điều hành của bạn (Windows, macOS, Linux).
 3. Anaconda có bao gồm một phiên bản Python tích hợp
-*Sau khi cài đặt, kiểm tra bằng cách chạy:
+4. Tạo và kích hoạt môi trường ảo
 ```bash
-conda --version
-python --version
+conda create -n text_extraction_env python=3.12.7 -y
+conda activate text_extraction_env
 ```
-4. [Hướng dẫn sử dụng](https://tuananalytic.com/tu-hoc-python-10-phut-gioi-thieu-nhanh-pandas-va-anaconda/)
-
 
 ### Cài đặt EasyOCR
 
-Cài đặt **PyTorch** để thực hiện các tính toán học sâu:
+Cài đặt **PyTorch** trước EasyOCR:
 ```bash
 pip install torch torchvision torchaudio
 ```
