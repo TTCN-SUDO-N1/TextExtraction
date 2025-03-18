@@ -42,7 +42,7 @@ pip install opencv-python
 - Chạy OCR trên một hình ảnh bằng đoạn mã trên.
 - Chỉnh sửa mã để trích xuất và xử lý văn bản theo nhu cầu.
 
-## Trích xuất văn bản từ hình ảnh
+### Trích xuất văn bản từ hình ảnh
 
 Để trích xuất văn bản từ hình ảnh bằng Easy OCR, chúng ta cần đầu vào một hình ảnh và sử dụng mã sau:
 ```python
@@ -51,7 +51,7 @@ reader = easyocr.Reader(['en']) # Khai báo ngôn ngữ để trích xuất văn
 result = reader.readtext('path/to/image.jpg') # Đường dẫn đến hình ảnh cần trích xuất
 print(result) # Hiển thị kết quả trích xuất văn bản từ hình ảnh
 ```
-## Hiển thị kết quả bằng OpenCV
+### Hiển thị kết quả bằng OpenCV
 
 Sau khi trích xuất văn bản từ hình ảnh, chúng ta có thể sử dụng OpenCV để hiển thị kết quả trích xuất lên hình ảnh gốc. Để làm điều này, chúng ta cần sử dụng mã sau:
 ```python
@@ -69,7 +69,7 @@ cv2.putText(image, text, top_left, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1
 cv2.imshow('Result', image) # Hiển thị hình ảnh kết quả
 cv2.waitKey(0) # Đợi người dùng nhấn phím bất kỳ để đóng cửa sổ
 ```
-Xử lý hình ảnh có nhiều dòng văn bản
+### Xử lý hình ảnh có nhiều dòng văn bản
 
 Khi xử lý hình ảnh có nhiều dòng văn bản, chúng ta cần duyệt qua từng dòng và hiển thị kết quả trích xuất trên từng dòng. Để làm điều này, chúng ta có thể sử dụng mã sau:
 ```python
