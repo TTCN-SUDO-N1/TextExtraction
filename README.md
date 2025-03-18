@@ -37,15 +37,6 @@ Cài đặt OpenCV để xử lý hình ảnh:
 pip install opencv-python
 ```
 
-Chạy đoạn mã sau để kiểm tra xem EasyOCR có hoạt động chính xác hay không:
-```python
-import easyocr
-reader = easyocr.Reader(['en', 'vi']) # Khai báo ngôn ngữ để trích xuất văn bản
-result = reader.readtext('path/to/image.jpg')
-print(result)
-```
-Hãy thay thế `'sample_image.jpg'` bằng một tệp ảnh hợp lệ.
-
 ## Cách Sử Dụng
 - Đặt các hình ảnh chứa văn bản vào thư mục của dự án.
 - Chạy OCR trên một hình ảnh bằng đoạn mã trên.
@@ -55,7 +46,7 @@ Hãy thay thế `'sample_image.jpg'` bằng một tệp ảnh hợp lệ.
 
 Để trích xuất văn bản từ hình ảnh bằng Easy OCR, chúng ta cần đầu vào một hình ảnh và sử dụng mã sau:
 ```python
-
+import easyocr
 reader = easyocr.Reader(['en']) # Khai báo ngôn ngữ để trích xuất văn bản (trong trường hợp này là tiếng Anh)
 result = reader.readtext('path/to/image.jpg') # Đường dẫn đến hình ảnh cần trích xuất
 print(result) # Hiển thị kết quả trích xuất văn bản từ hình ảnh
