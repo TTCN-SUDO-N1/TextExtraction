@@ -19,12 +19,6 @@ python --version
 
 ### Cài đặt EasyOCR
 
-Để đảm bảo môi trường sạch sẽ, tạo một môi trường Anaconda mới cho dự án này:
-```bash
-conda create -n text_extraction_env python=3.9 -y
-conda activate text_extraction_env
-```
-
 Cài đặt **PyTorch** để thực hiện các tính toán học sâu:
 ```bash
 pip install torch torchvision torchaudio
@@ -32,7 +26,7 @@ pip install torch torchvision torchaudio
 
 Cài đặt **EasyOCR**:
 ```bash
-pip install easyocr
+conda install anaconda::easyocr
 ```
 
 Cài đặt OpenCV để xử lý hình ảnh:
