@@ -26,7 +26,7 @@ conda activate text_extraction_env
 1. Cài đặt để chạy
 
 ```bash 
-conda install opencv-python easyocr pytorch torchvision torchaudio tensorflow pillow=9.4 -c pytorch --name text_extraction_env
+conda install easyocr pytorch torchvision torchaudio tensorflow pillow=9.4 -c pytorch --name text_extraction_env
 ```
 Lưu ý, nếu các bước sau bị lỗi thì chạy lại lệnh dưới để chạy trên cpu
 - Cài đặt để chạy trên cpu (Terminal,Command Promp, Powershell)
