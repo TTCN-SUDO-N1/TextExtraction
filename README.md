@@ -1,5 +1,7 @@
 # TextExtraction
+
 Lấy text từ hình ảnh
+
 ## Cài đặt
 
 Để cài đặt EasyOCR trên môi trường anaconda python, hãy làm theo các bước sau: 
@@ -10,31 +12,33 @@ Lấy text từ hình ảnh
 2. Làm theo hướng dẫn cài đặt theo hệ điều hành của bạn (Windows, macOS, Linux).
 3. Anaconda có bao gồm một phiên bản Python tích hợp
 4. Tạo và kích hoạt môi trường ảo
+Vì easyocr cần pytorch mà pytorch chỉ đang hỗ trợ phiên bản python 3.11 trở xuống trên conda nên ta sẽ cài bản python 3.11
+
 ```bash
-conda create -n text_extraction_env python=3.12.7 -y
+conda create -n text_extraction_env python=3.11 -y
 conda activate text_extraction_env
 ```
 
 ### Cài đặt EasyOCR
 
 Để sử dụng Easy OCR, trước tiên chúng ta cần cài đặt PyTorch. PyTorch là một thư viện deep learning, và Easy OCR được xây dựng trên nền tảng này. Cài đặt PyTorch trên hệ điều hành của bạn và kiểm tra xem máy tính có hỗ trợ GPU hay không.
-Cài đặt **PyTorch**:
-```bash
-pip install torch torchvision torchaudio
+
+1. Cài đặt để chạy
+
+```bash 
+conda install opencv-python easyocr pytorch torchvision torchaudio tensorflow pillow=9.4 -c pytorch --name text_extraction_env
 ```
-Tiếp theo, chúng ta cần cài đặt Easy OCR bằng cách sử dụng lệnh dưới đây:
+Lưu ý, nếu các bước sau bị lỗi thì chạy lại lệnh dưới để chạy trên cpu
+- Cài đặt để chạy trên cpu (Terminal,Command Promp, Powershell)
+  
 ```bash
-pip install easyocr
+conda install tensorflow-cpu cpuonly -c pytorch --name text_extraction_env
 ```
 
 Sau khi cài đặt xong, chúng ta có thể import Easy OCR vào dự án Python của mình bằng cách sử dụng:
+
 ```python
 import easyocr
-```
-
-Cài đặt OpenCV để xử lý hình ảnh:
-```bash
-pip install opencv-python
 ```
 
 ## Cách Sử Dụng
@@ -54,6 +58,7 @@ print(result) # Hiển thị kết quả trích xuất văn bản từ hình ả
 ### Hiển thị kết quả bằng OpenCV
 
 Sau khi trích xuất văn bản từ hình ảnh, chúng ta có thể sử dụng OpenCV để hiển thị kết quả trích xuất lên hình ảnh gốc. Để làm điều này, chúng ta cần sử dụng mã sau:
+
 ```python
 import cv2
 
@@ -72,6 +77,7 @@ cv2.waitKey(0) # Đợi người dùng nhấn phím bất kỳ để đóng cử
 ### Xử lý hình ảnh có nhiều dòng văn bản
 
 Khi xử lý hình ảnh có nhiều dòng văn bản, chúng ta cần duyệt qua từng dòng và hiển thị kết quả trích xuất trên từng dòng. Để làm điều này, chúng ta có thể sử dụng mã sau:
+
 ```python
 import cv2
 
