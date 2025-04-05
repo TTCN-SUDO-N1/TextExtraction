@@ -1,4 +1,4 @@
-# 🎈 Mẫu ứng dụng trống
+# 🎈 Mẫu ứng dụng
 
 Một mẫu ứng dụng Streamlit đơn giản để bạn tùy chỉnh!
 
