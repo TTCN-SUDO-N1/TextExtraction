@@ -99,27 +99,33 @@
  - Chỉnh sửa mã để trích xuất và xử lý văn bản theo nhu cầu.
 
 
-# 🎈 Mẫu ứng dụng
-
-Một mẫu ứng dụng Streamlit đơn giản để bạn tùy chỉnh!
+# 📄 Ứng dụng Trích Xuất Văn Bản từ Hình Ảnh
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
 
-### Cách chạy trên máy của bạn
+## Cách chạy trên máy của bạn
 
-1. Cài đặt các yêu cầu
-
+1. **Tạo và kích hoạt môi trường ảo**:
+   ```bash
+   python3 -m venv env
+   source env/bin/activate
    ```
-   $ pip install -r requirements.txt
+
+2. **Cài đặt**:
+   ```bash
+   pip install -r requirements.txt
    ```
 
-   Điều này sẽ cài đặt các thư viện sau:
-   - `streamlit` để xây dựng ứng dụng web
-   - `Pillow` để xử lý hình ảnh
-   - `easyocr` để trích xuất văn bản từ hình ảnh (hỗ trợ tiếng Anh và tiếng Việt)
-
-2. Chạy ứng dụng
-
+3. **Chạy ứng dụng**:
+   ```bash
+   streamlit run streamlit_app.py
    ```
-   $ streamlit run streamlit_app.py
+
+4. **Cấu trúc thư mục** *(tuỳ chọn)*:
    ```
+   text_extract_web/
+   ├── streamlit_app.py
+   ├── requirements.txt
+   └── README.md
+   ```
+
