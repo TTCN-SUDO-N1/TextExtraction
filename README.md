@@ -121,7 +121,7 @@
    streamlit run streamlit_app.py
    ```
 
-4. **Cấu trúc thư mục** *(tuỳ chọn)*:
+4. **Cấu trúc thư mục**:
    ```
    text_extract_web/
    ├── streamlit_app.py
